@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const Comic = () => {
     const marvelService = useMarvelService();
@@ -43,7 +43,7 @@ const Comic = () => {
                             <p className="single-comic__descr"></p>
                             <div className="single-comic__price">{item.price}$</div>
                         </div>
-                        <a href="#" className="single-comic__back">Back to all</a>
+                        <Link  end to='/comics' className="single-comic__back">Back to all</Link>
                     </div>
             
         )
